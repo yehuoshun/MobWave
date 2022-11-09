@@ -35,6 +35,8 @@ public class sufferHandler implements CommandHandler {
 		} // catch
 		}// readFile
 
+		final Position pos = new Position(0, 0, 0); //for reference to base place
+	
     public void sufferExecutor(Player sender, Player targetPlayer, List<String> args) {
         // Defaults for simple start
 		readFile();
@@ -44,7 +46,6 @@ public class sufferHandler implements CommandHandler {
         int lvMobs = 100;	// Placeholder level of monsters spawned
 		float radius = 8f;	// Placeholder radius of tp and spawns
 		float icd = 2500f;	// Placeholder teleport and switch char cd in milliseconds
-		final Position pos = new Position(0, 0, 0); //for reference to base place
 		final Position rot = new Position(targetPlayer.getRotation().getX(),targetPlayer.getRotation().getY(),targetPlayer.getRotation().getZ()); //we sure dont want char wondering frm base pos
 		//catch args for parems yey
 		switch (args.size()) {
